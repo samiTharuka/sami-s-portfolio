@@ -1,7 +1,7 @@
 function contact() {
   return (
-    <section className="h-screen px-4 ">
-      <div className="flex flex-col p-6">
+    <section className="h-screen px-4">
+      <div className="flex flex-col p-6 h-full justify-center">
         <div className="mb-12">
           <span className="text-4xl md:text-6xl font-bold">
             Contact Me<span className="text-primary">.</span>

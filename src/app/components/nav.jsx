@@ -13,6 +13,13 @@ function nav() {
     }
   };
 
+  const menu = [
+    { name: "about" },
+    { name: "projects" },
+    { name: "skills" },
+    { name: "contact" },
+  ];
+
   return (
     <div className="flex relative justify-between items-center mx-auto z-[80] px-2">
       {!navbar ? (
@@ -31,23 +38,21 @@ function nav() {
       ) : (
         <motion.div
           className="flex md:flex-row flex-row-reverse items-center h-screen px-4 fixed top-0 left-0 w-screen bg-black"
-          initial={{ x: 1000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1, duration: 1 }}
+          initial={{ x: 1000 }}
+          animate={{ x: 0, duration: 1 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           <div className="flex flex-col w-full md:ps-12">
-            <span className="text-4xl md:text-9xl font-clash border-b-2 border-primary w-[96%] cursor-pointer">
-              about.
-            </span>
-            <span className="text-4xl md:text-9xl font-clash border-b-2 border-primary w-[90%] cursor-pointer">
-              projects.
-            </span>
-            <span className="text-4xl md:text-9xl font-clash border-b-2 border-primary w-[90%] cursor-pointer">
-              skills.
-            </span>
-            <span className="text-4xl md:text-9xl font-clash border-b-2 border-primary w-[96%] cursor-pointer">
-              contact.
-            </span>
+            {menu.map((item, i) => {
+              return (
+                <span
+                  className="text-4xl md:text-9xl font-clash border-b-2 border-primary w-[96%] cursor-pointer"
+                  key={i}
+                >
+                  {item.name}
+                </span>
+              );
+            })}
           </div>
 
           <div

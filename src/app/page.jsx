@@ -4,8 +4,9 @@ import Welcome from "./pages/welcome";
 import Hero from "./pages/hero";
 import About from "./pages/about";
 import Projects from "./pages/projects";
-import Contact from "./pages/contact";
 import Skills from "./pages/skills";
+import Contact from "./pages/contact";
+import Contact2 from "./pages/contact2";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 
@@ -35,6 +36,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <Contact2 />
     </>
   );
 }

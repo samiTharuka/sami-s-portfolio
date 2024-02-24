@@ -19,7 +19,7 @@ function projects() {
       alt: "travel",
       name: "travel",
       content:
-        "A perfect place for travellers.easily find the best places to visiand enjoy.",
+        "A perfect place for travellers.easily find the best places to visit and enjoy.",
       color: "#a16207",
     },
     {
@@ -53,7 +53,7 @@ function projects() {
       {projectPics.map((item, i) => {
         return (
           <div
-            className="h-screen md:flex-row flex-col flex py-8 border-b-2 border-primary "
+            className="h-screen md:flex-row flex-col flex py-8 border-b-2 border-primary items-center"
             key={i}
           >
             <div className="w-full md:w-1/3 md:mb-28">
@@ -71,7 +71,7 @@ function projects() {
               </p>
             </div>
 
-            <div className="w-full md:w-2/3">
+            <div className="w-full md:w-2/3 -rotate-2">
               <Image
                 src={item.src}
                 width={500}
